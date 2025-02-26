@@ -19,6 +19,7 @@ class GameUI:
         position_top = int(screen_height / 2 - window_height / 2)
         position_right = int(screen_width / 2 - window_width / 2)
         root.geometry(f"{window_width}x{window_height}+{position_right}+{position_top}")
+        root.resizable(False, False)
 
         player_scores = [0, 0]
         curr_number = None
@@ -34,8 +35,8 @@ class GameUI:
         # START PAGE
         def start():
             nonlocal curr_player
-            header = tk.Label(root, text="Multiply!", font=("Arial", 30, "bold"), bg='#1DA1F2', fg='white')
-            header.pack(pady=(70,20))
+            header = tk.Label(root, text="Multiply!", font=("Courier", 30, "bold"), bg='#1DA1F2', fg='white')
+            header.pack(pady=(60,30))
 
             player_label = tk.Label(root, text=f"Player {curr_player + 1}'s turn", font=("Arial", 20, "bold"), bg='#1DA1F2', fg='white')
             player_label.pack(pady=(10, 40))
