@@ -27,12 +27,8 @@ def buildTree(startNumb):
 
 def createLevel(parentNode):
     number = parentNode.data
-    if number*2 >= 1200:
+    if number >= 1200:
         return
-    elif number*3 >= 1200:
-        nodes = [TreeNode(number * 2)]
-    elif number*4 >= 1200:
-        nodes = [TreeNode(number * 2), TreeNode(number * 3)]
     else:
         nodes = [TreeNode(number * 2), TreeNode(number * 3), TreeNode(number * 4)]
 
